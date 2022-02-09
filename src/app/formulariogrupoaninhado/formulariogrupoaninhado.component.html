@@ -1,0 +1,61 @@
+<br>
+<br>
+<div class="container">
+  <form [formGroup]="dadosPessoais" (ngSubmit)="mostrarValores()">
+    <div class="form-group">
+      <label>
+        Nome:
+      </label>
+      <input type="text" formControlName="nome" class="form-control">
+      <!--<div *ngIf="f.nome.errors && (f.nome.dirty ||  f.nome.touched)" class="alert alert-danger">
+        <div *ngIf="f.nome.errors.required"> Nome é Obrigaório</div>
+      </div>-->
+      <div class="form-group">
+        <label>
+          Sobre nome:
+        </label>
+        <input type="text" formControlName="sobreNome" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>
+          E-mail:
+        </label>
+        <input type="text" formControlName="email" class="form-control">
+      </div>
+      <!--</div class="form-control-feedback" *ngIf="dadosPessoais.controls.email.errors && ( dadosPessoais.controls.email.dirty ||  dadosPessoais.control )">
+          <p *ngIf="dadosPessoais.controls.email.errors.requerid">Email Obrigaório</p>
+          <p *ngIf="dadosPessoais.controls.email.errors.emailDominio">Dominio diferente de udemy.com</p>
+        </div>-->
+
+      <!--outro campo de grupo de formuilarios dentro de um grupo de formulario-->
+      <div formGroupName="endereco">
+        <label>
+          Rua:
+        </label>
+        <input type="text" formControlName="rua" class="form-control">
+
+        <label>
+          Ciade:
+        </label>
+        <input type="text" formControlName="cidade" class="form-control">
+
+        <label>
+          Estado:
+        </label>
+        <input type="text" formControlName="estado" class="form-control">
+
+        <label>
+          Cep:
+        </label>
+        <input type="text" formControlName="cep" class="form-control">
+
+      </div>
+
+      <button type="submit" class="btn btn-success">Mostrar Valores</button>
+
+    </div>
+  </form>
+  <p>
+    Formularios: {{ dadosPessoais.status }}
+  </p>
+</div>

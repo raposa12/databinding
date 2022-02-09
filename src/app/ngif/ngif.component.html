@@ -1,0 +1,14 @@
+<!--quando clicar no botao ele muda pra essa versao Angular 6-->
+<div *ngIf="mostrarVersaoAtual">
+  <h4> Angular 6</h4>
+</div>
+
+<!--começa com esse falso Angular 5 quando clica muda pra outra versao-->
+<div *ngIf="!mostrarVersaoAtual">
+  <h4> Angular 5</h4>
+</div>
+
+<!--botao para mudar as versao-->
+<button (click)="mudarVersao()">
+  Mudar Versão
+</button>

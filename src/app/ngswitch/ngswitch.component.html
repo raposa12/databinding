@@ -1,0 +1,15 @@
+<h3>Seleção de Cursos</h3>
+<!--imprimindo as opçoes de seleçao de curso-->
+<select [(ngModel)]="selection">
+  <option *ngFor="let option of options">{{option}}</option>
+</select>
+
+<!--aqui ele esta botando os valores dos cusrsos nos seu devidos nomes a serem selecionados-->
+<div [ngSwitch]="selection">
+  <div *ngSwitchCase="options[0]">Angular</div>
+  <div [ngSwitch]="selection">
+    <div *ngSwitchCase="options[1]">React</div>
+    <div [ngSwitch]="selection">
+      <div *ngSwitchCase="options[2]">Vue</div>
+      <div *ngSwitchDefault>Default</div>
+    </div>

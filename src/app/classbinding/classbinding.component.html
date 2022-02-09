@@ -1,0 +1,6 @@
+<!--se apicar class for igual a minhaClass ele aplica cor na class-->
+<div [class.minhaClass]="aplicarClasse">Aplicando class</div>
+<div [style.color]="aplicarStyle ?  'blue' : 'orange'">Aplicando Style</div>
+
+<!--funçao ou metodo de cor-->
+<p [ngStyle]="setarStyle()">Aplicar Metodo de Styles</p>

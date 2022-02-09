@@ -1,0 +1,11 @@
+<label>Nome do curso: </label>
+<!--aqui ele utlizou o property e o event para o valor e a infomaçao-->
+<input type="text" [value]="nomeCurso" (input)="nomeCurso = ($any($event.target).value)">
+<p>o nome do curso digitado foi {{ nomeCurso }}
+<p>
+
+  <br>
+
+  <!--aqui ele simplificou tudo juntsndo o property e o event-->
+  <input type="text" [(ngModel)]="nomeCurso">
+<p>o nome do curso digitado foi {{ nomeCurso }}

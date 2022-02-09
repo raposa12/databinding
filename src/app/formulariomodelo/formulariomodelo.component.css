@@ -1,0 +1,9 @@
+/*se o campo tiver prenchido ele mostra cor verde no campo*/
+.ng-valid[required], .ngvalid.requerid{
+  border-left: 5px solid green;
+}
+
+/*se o campo não tiver prenchido ele mostra cor vermelho no campo*/
+.ng-invalid:not(form){
+  border-left: 5px solid red;
+}

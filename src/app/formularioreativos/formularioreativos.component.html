@@ -1,0 +1,16 @@
+<br>
+<br>
+<!--formulario dee nome-->
+<label>
+  Nome: <input type="text" [formControl]="nome">
+</label>
+
+<!--botao para ataulizar o nome do formulario-->
+<p>
+  <button (click)="atualizarNome()">Atualizar Nome</button>
+</p>
+
+<!--o nome do formulario sera apresntado aqui-->
+<p>
+  valor: {{ nome.value }}
+</p>
